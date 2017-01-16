@@ -14,13 +14,16 @@ public class App {
 
 ```java
 public class HikariModule {
-  @Config(name = "database.host", description="the computer for the database", required = true)
-  private String host;
+  @Config(name = "database.host", description="the database server url", required = true)
+  private String host = "localhost";
   
-  @Config(name = "database.user", description="the user for the database", required = true)
+  @Config(name = "database.database", description="the database to use", required = true)
+  private String database = "my_db";
+  
+  @Config(name = "database.user", description="the database user", required = true)
   private String user;
   
-  @Config(name = "database.password", description="the password", required = true)
+  @Config(name = "database.password", description="the database password", required = true)
   private String password;
   
   // Config would be added to an automatically generated jcommander
