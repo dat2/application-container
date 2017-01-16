@@ -6,6 +6,7 @@ public class App {
     ApplicationContainer container = new ApplicationContainer();
     container.registerModule(HikariModule.class);
     container.registerComponent(ExampleComponent.class);
+    container.propertiesFile("C:\...\app.properties");
     container.run(Main.class, args); // jcommander will auto parse and configure the modules
   }
 }
