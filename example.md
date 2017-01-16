@@ -33,6 +33,7 @@ public class HikariModule {
     dataSource.setJdbcUrl(jdbcUrl);
     dataSource.setUser(user);
     dataSource.setPassword(password);
+    return dataSource;
   }
   
   // this would be auto generated
